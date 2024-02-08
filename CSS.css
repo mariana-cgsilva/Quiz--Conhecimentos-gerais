@@ -36,15 +36,42 @@ header h1 {
     color: #f1f5f9; 
 }
 
+#quiz{
+    counter-reset: quiz-item;
+}
+
 .quiz-item {
     margin-top: 24px;
     border: 1px solid #475569;
     border-radius: 6px;
+
+    overflow: hidden;
 }
 
 .quiz-item h3 {
     padding: 20px 24px;
     color: #e2e8f0; 
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: #1e293B;
+}
+
+.quiz-item h3:before {
+    counter-increment: quiz-item;
+    content: counter(quiz-item); 
+
+    background-color: #475569;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .quiz-item dl {
@@ -88,7 +115,7 @@ input:checked:before {
     width: 10px;
     height: 10px;
 
-    background-color: #A3E635
+    background-color: #A3E635;
     border-radius: 50%;
 }
 
