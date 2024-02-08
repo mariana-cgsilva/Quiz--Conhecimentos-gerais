@@ -131,5 +131,5 @@ for(const item of perguntas) {
 
     
     // coloca a pergunta na tela
-    quizItem.appendChild(quizItem)
+    quiz.appendChild(quizItem)
 }
